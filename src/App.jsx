@@ -1,19 +1,23 @@
 import  { useState } from "react";
-import Dropdown from "./components/Dropdown";
 import Chart from "./components/Chart";
+import Dropdown from "./components/Dropdown";
+import "./styles/styles.css";
 
 const App = () => {
-  const [selectedCoin, setSelectedCoin] = useState("");
-  const options = ["ETH/USDT", "BNB/USDT", "DOT/USDT"];
+  const [selectedCoin, setSelectedCoin] = useState("ETH/USDT");
+  const coins = ["ETH/USDT", "BTC/USDT", "BNB/USDT"];
+
+  const handleCoinSelect = (coin) => {
+    setSelectedCoin(coin);
+  };
 
   return (
-    <div>
-      <h1>Binance Live Candlestick Chart</h1>
-      <Dropdown options={options} onSelect={setSelectedCoin} />
-      {selectedCoin && <Chart selectedCoin={selectedCoin} />}
+    <div className="chart-container">
+      <h1>Binance Live Market Data</h1>
+      <Dropdown options={coins} onSelect={handleCoinSelect} />
+      <Chart selectedCoin={selectedCoin} />
     </div>
   );
 };
 
 export default App;
-

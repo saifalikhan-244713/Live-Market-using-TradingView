@@ -1,0 +1,104 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #000000, #468fce);
+  color: white;
+}
+.dropdown-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+select:nth-child(1) {
+  position: relative;
+  left: 80px;
+  bottom: 55px;
+}
+.chart-wrapper {
+  background-color: white;
+  border-radius: 10px;
+  padding: 30px 30px 10px 40px;
+  width: 100%;
+  box-sizing: border-box;
+}
+select:nth-child(2) {
+  position: relative;
+  right: 50px;
+}
+h1,
+h2 {
+  text-align: center;
+  color: white;
+}
+
+select {
+  padding: 8px;
+  margin: 10px;
+  border-radius: 5px;
+  border: none;
+  font-size: 16px;
+  background: linear-gradient(135deg, #eb9494, #468fce);
+  color: white;
+}
+#coinDrop {
+  position: relative;
+  right: 80px;
+  width: 130px;
+}
+#intervalDrop {
+  position: relative;
+  left: 70px;
+  width: 130px;
+  bottom: 45px;
+}
+select option {
+  color: black;
+  background: linear-gradient(135deg, #eb9494, #468fce);
+  width: 200px;
+}
+
+.dropdown-container {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.selected-option {
+  padding: 10px;
+  border: 1px solid #ccc;
+  background: linear-gradient(135deg, #eb9494, #468fce);
+  border-radius: 5px;
+  color: white;
+}
+
+.options {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: linear-gradient(135deg, #eb9494, #468fce);
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  z-index: 10;
+}
+.option {
+  padding: 10px;
+  color: rgb(255, 255, 255);
+}
+
+.option:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.chart-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
